@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+}
+header{
+    box-shadow: 5px 5px 5px ;
+}
+
+header nav{
+    background-color: #fff;
+}
+
+header nav ul{
+    display: flex;  
+    justify-content: flex-end;
+
+}
+
+header nav ul li {
+    padding: 1rem;
+    list-style: none;
+}
+
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+.active{  
+    border-bottom: 5px solid rgb(27, 59, 27);
+}
+
+header nav ul li a:hover::before{
+    font-family: "FontAwesome";
+    content: "\3e";
+}
+
+/**************MAIN SECTION ********/
+main{
+    width: 80%;
+    margin: auto;
+}
+section article{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 3em;
+    align-items: center;
+    padding: 5%;
+}
+
+section article:nth-child(2){
+    display: flex;
+    flex-direction: row-reverse;
+}
+/**********************************/
+
+
+/**********************************/
+/************FORMULAIRE*************/
+
+
+.form{
+    display: grid;
+    justify-items: center;
+}
+
+/*****************************/
+form div{
+	margin-bottom:20px;
+}
+label{
+	cursor:pointer;
+	display:block;
+	float:left;
+	font-size:13px;
+	font-weight:bold;
+	line-height:28px;
+	margin-bottom:5px;
+	width:150px;
+}
+form div:hover label{
+	color:#0459b7;
+}
+form div:hover label:after{
+	content:" >>";
+}
+
+input[type=text]{
+	background: rgba(255, 255, 255, 0.9);
+	background:gradient(linear, left top, left bottom, from(#eee), to(#fff), color-stop(0.2, #fff)); /* Webkit */
+	border:1px solid #aaa;
+	box-shadow:0 0 3px #aaa;
+	padding:5px;
+}
+input[type=text]:focus{
+	border-color:#093c75;
+	box-shadow:0 0 3px #0459b7;
+	outline:none; /* Pour enlever le contour lorsque l'on slectionne un input */
+}
+select{
+	cursor:pointer;
+	padding:3px;
+	box-shadow:0 0 3px #aaa;
+}
+select:active,
+select:focus{
+	border:1px solid #093c75;
+	outline:none;
+}
+input[type=submit],
+input[type=reset]{
+	background:#3b5d50;
+	border:1px solid;
+	border-radius:3px;
+	color:#fff;
+	cursor:pointer;
+	font-size:12px;
+	font-weight:bold;
+	margin:2%;
+	padding:1rem;
+	text-transform:uppercase;
+    border-radius: 30px;
+}
+input[type=submit]:hover{
+	background:linear-gradient(90deg, #067cd3, #0bcdff);
+	border-color:#093c75;
+	text-decoration:none;
+}
+input[type=submit]:active,
+input[type=submit]:focus{
+	background:#ccc;
+	background:linear-gradient(90deg, #0bcdff, #067cd3);
+	border-color:#093c75;
+	outline:none;
+}
+/*****************************/
+
+/************** FOOTER ***************/
+footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 5%;
+    background: rgb(27, 59, 27);
+    color: #fff;
+    text-align: center;
+    gap: 5%;
+}
+footer a{
+    color: #fff;
+}
+
+.others{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+/*********** FIN  FOOTER**************/

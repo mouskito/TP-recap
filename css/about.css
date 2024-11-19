@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+}
+header{
+    box-shadow: 5px 5px 5px ;
+}
+
+header nav{
+    background-color: #fff;
+}
+
+header nav ul{
+    display: flex;  
+    justify-content: flex-end;
+
+}
+
+header nav ul li {
+    padding: 1rem;
+    list-style: none;
+}
+
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+.active{  
+    border-bottom: 5px solid rgb(27, 59, 27);
+}
+
+header nav ul li a:hover::before{
+    font-family: "FontAwesome";
+    content: "\3e";
+}
+
+
+/**********************/
+
+main{
+    width: 60%;
+    margin: 5% auto;
+}
+
+main  .container ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .5em;
+    padding: 0;
+}
+
+#integ {
+    list-style: none;
+    padding: 1rem 0;
+    }
+    #integ li{
+       position: relative;
+    }
+    
+    #integ li::before{
+        content: "\27BA";
+        color: #a4c617;
+        background-color: #EBF4D8;
+       
+        position: absolute;
+        left: 0;
+    }
+    /**********************/
+
+
+.container ul li {
+    position: relative; /* Nécessaire pour positionner le paragraphe */
+    width: 150px;
+    overflow: hidden; /* Pour s'assurer que le contenu ne dépasse pas */
+
+}
+
+.container ul li img {
+    border-radius: 5px; 
+}
+
+/* Masquer le paragraphe par défaut */
+.container ul li p {
+    position: absolute;
+    bottom: 0; /* Collé en bas de l'image */
+    left: 0;
+    width: 100%;
+    background-color: rgba(34, 33, 33, 0.7); /* Fond semi-transparent */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0; /* Masqué par défaut */
+    transform: translateY(100%); /* Déplacé en bas */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Transition fluide */
+}
+
+/* Afficher le paragraphe au survol de l'image */
+.container ul li:hover p {
+    opacity: 1; /* Devient visible */
+    transform: translateY(0); /* Reprend sa position initiale */
+}
+
+
+
+/************** FOOTER ***************/
+footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 5%;
+    background: rgb(27, 59, 27);
+    color: #fff;
+    text-align: center;
+    gap: 5%;
+}
+footer a{
+    color: #fff;
+}
+
+.others{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+/*********** FIN  FOOTER**************/
